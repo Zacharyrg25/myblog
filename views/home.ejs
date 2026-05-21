@@ -1,0 +1,19 @@
+<%- include("partials/header.ejs") %>
+
+<div id="blog-list">
+    <% if (blogs.length === 0) { %>
+        <div class="blog-item">
+            <p class="blog-content">It's so empty in here.</p>
+        </div>
+    <% } else { %>
+        <% for (let i = blogs.length - 1; i >= 0; i--) { %>
+            <div class="blog-item">
+                <p class="blog-date"><%= blogs[i].date %></p>
+                <h2 class="blog-title"><a href="/view/<%= i %>"><%= blogs[i].title %></a></h2>
+                <p class="blog-content"><%= blogs[i].content.length > 500 ? blogs[i].content.substring(0, 500) + "..." : blogs[i].content %></p>
+            </div>
+        <% } %>
+    <% } %>
+</div>
+
+<%- include("partials/footer.ejs") %>

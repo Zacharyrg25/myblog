@@ -1,0 +1,42 @@
+<%- include("partials/header.ejs") %>
+
+<div id="blog-create">
+    <% if (locals.index) { %>
+        <h1 class="title">Edit Blog</h1>
+        <div class="blog-create">
+            <form class="form" action="/update" method="POST">
+                <input type="hidden" id="index" name="index" value="<%= index %>">
+                <div>
+                    <label for="title">Enter Blog Title</label><br>
+                    <input class="form-create" type="text" id="title" name="title" placeholder="Title" value="<%= blogTitle %>" required>
+                </div>
+                <div>
+                    <label for="content">Enter Blog Content</label><br>
+                    <textarea class="form-create textarea" id="content" name="content" rows="5" placeholder="Content" required><%= blogContent %></textarea>
+                </div>
+                <div class="button-div">
+                    <input class="button" type="submit" value="Update Blog">
+                </div>
+            </form>
+        </div>
+    <% } else { %>
+        <h1 class="title">Create Blog</h1>
+        <div class="blog-create">
+            <form class="form" action="/save" method="POST">
+                <div>
+                    <label for="title">Enter Blog Title</label><br>
+                    <input class="form-create" type="text" id="title" name="title" placeholder="Title" required>
+                </div>
+                <div>
+                    <label for="content">Enter Blog Content</label><br>
+                    <textarea class="form-create textarea" id="content" name="content" rows="5" placeholder="Content" required></textarea>
+                </div>
+                <div>
+                    <input class="button" type="submit" value="Create Blog">
+                </div>
+            </form>
+        </div>
+    <% } %>
+</div>
+
+<%- include("partials/footer.ejs") %>

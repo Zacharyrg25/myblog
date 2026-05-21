@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+<div id="blog-view">
+    <div class="blog-view">
+        <p class="blog-date"><%= blogDate %></p>
+        <h2 class="blog-title"><%= blogTitle %></h2>
+        <p class="blog-content"><%= blogContent %></p>
+        <form class="form-view" action="/delete" method="POST">
+            <input type="hidden" id="index" name="index" value="<%= index %>">
+            <div class="button-div-view">
+                    <input class="button" type="submit" value="Delete Blog">
+            </div>
+            <div class="button-div-view">
+                <a href="/edit/<%= index %>" class="button">Edit Blog</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include("partials/footer.ejs") %>

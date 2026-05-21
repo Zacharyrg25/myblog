@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: Baskerville;
+}
+
+header {
+    background-color: black;
+    border-bottom: 0.1px solid white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.navbar-logo {
+    font-weight: bold;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+    gap: 20px;
+}
+
+main {
+    background-color: black;
+    background-image: radial-gradient(circle, white 0.1px, transparent 1px);
+    background-size: 10px 10px;
+}
+
+#blog-list, #blog-create, #blog-view {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.blog-item, .blog-create, .blog-view {
+    background-color: black;
+    border: 0.1px solid white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    color: black;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.form-create {
+    width: 100%;
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-view {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 5px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+    border-top: 0.1px solid white;
+}
+
+.copyright {
+    padding: 20px;
+}
